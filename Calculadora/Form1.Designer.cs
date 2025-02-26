@@ -121,6 +121,7 @@
             this.numOper2.Name = "numOper2";
             this.numOper2.Size = new System.Drawing.Size(120, 35);
             this.numOper2.TabIndex = 6;
+            this.numOper2.ValueChanged += new System.EventHandler(this.numOper2_ValueChanged);
             // 
             // btSub
             // 
@@ -181,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 471);
+            this.ClientSize = new System.Drawing.Size(364, 414);
             this.Controls.Add(this.btDiv);
             this.Controls.Add(this.btIgual);
             this.Controls.Add(this.btSoma);

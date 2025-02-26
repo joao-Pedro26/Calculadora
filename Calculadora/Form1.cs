@@ -21,6 +21,17 @@ namespace Calculadora
         {
             AtribuirOperacao(btSoma.Text);
         }
+        void TravarBotao()
+        {
+            //if((lblOper.Text == btDiv.Text && numOper2.Value == 0)
+            //    || lblOper.Text == "...")
+            //    btIgual.Enabled = false;
+            //else
+            //    btIgual.Enabled = true;
+            btIgual.Enabled =
+                !((lblOper.Text == btDiv.Text && numOper2.Value == 0)
+                || lblOper.Text == "...");
+        }
 
         void AtribuirOperacao(string oper)
         {
@@ -79,6 +90,11 @@ namespace Calculadora
                 resultado = num1 / num2;
 
             lblResultado.Text = resultado.ToString();
+        }
+
+        private void numOper2_ValueChanged(object sender, EventArgs e)
+        {
+            TravarBotao();
         }
     }
 }
