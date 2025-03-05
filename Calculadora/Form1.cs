@@ -47,26 +47,7 @@ namespace Calculadora
         private void btDiv_Click(object sender, EventArgs e)
         {
             AtribuirOperacao(btDiv.Text);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numOper1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblResultado_Click(object sender, EventArgs e)
-        {
-
+            TravarBotao();
         }
 
         private void btSub_Click(object sender, EventArgs e)
@@ -90,11 +71,53 @@ namespace Calculadora
                 resultado = num1 / num2;
 
             lblResultado.Text = resultado.ToString();
+            AtualizarBotaoSegue();
+
         }
 
+        void AtualizarBotaoSegue()
+        {
+           btSegue.Enabled = !(lblResultado.Text == "");
+        }
+        private void btSegue_Click(object sender, EventArgs e)
+        {
+            numOper1.Text = lblResultado.Text;
+            numOper2.Value = 0;
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            numOper1.Value = 0;
+            numOper2.Value = 0;
+            lblOper.Text = "...";
+            lblResultado.Text = "";
+        }
         private void numOper2_ValueChanged(object sender, EventArgs e)
         {
             TravarBotao();
         }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numOper1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblResultado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

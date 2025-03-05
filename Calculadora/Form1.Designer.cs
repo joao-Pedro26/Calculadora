@@ -39,6 +39,8 @@
             this.btSoma = new System.Windows.Forms.Button();
             this.btIgual = new System.Windows.Forms.Button();
             this.btDiv = new System.Windows.Forms.Button();
+            this.btLimpar = new System.Windows.Forms.Button();
+            this.btSegue = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numOper1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper2)).BeginInit();
             this.SuspendLayout();
@@ -158,11 +160,12 @@
             // 
             // btIgual
             // 
+            this.btIgual.Enabled = false;
             this.btIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btIgual.Location = new System.Drawing.Point(127, 283);
+            this.btIgual.Location = new System.Drawing.Point(249, 270);
             this.btIgual.Name = "btIgual";
-            this.btIgual.Size = new System.Drawing.Size(127, 41);
-            this.btIgual.TabIndex = 10;
+            this.btIgual.Size = new System.Drawing.Size(95, 37);
+            this.btIgual.TabIndex = 11;
             this.btIgual.Text = "=";
             this.btIgual.UseVisualStyleBackColor = true;
             this.btIgual.Click += new System.EventHandler(this.btIgual_Click);
@@ -178,11 +181,36 @@
             this.btDiv.UseVisualStyleBackColor = true;
             this.btDiv.Click += new System.EventHandler(this.btDiv_Click);
             // 
+            // btLimpar
+            // 
+            this.btLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.Location = new System.Drawing.Point(148, 270);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(95, 37);
+            this.btLimpar.TabIndex = 12;
+            this.btLimpar.Text = "Limpar";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // btSegue
+            // 
+            this.btSegue.Enabled = false;
+            this.btSegue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSegue.Location = new System.Drawing.Point(47, 270);
+            this.btSegue.Name = "btSegue";
+            this.btSegue.Size = new System.Drawing.Size(95, 37);
+            this.btSegue.TabIndex = 13;
+            this.btSegue.Text = "Segue";
+            this.btSegue.UseVisualStyleBackColor = true;
+            this.btSegue.Click += new System.EventHandler(this.btSegue_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 414);
+            this.Controls.Add(this.btSegue);
+            this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btDiv);
             this.Controls.Add(this.btIgual);
             this.Controls.Add(this.btSoma);
@@ -216,6 +244,8 @@
         private System.Windows.Forms.Button btSoma;
         private System.Windows.Forms.Button btIgual;
         private System.Windows.Forms.Button btDiv;
+        private System.Windows.Forms.Button btLimpar;
+        private System.Windows.Forms.Button btSegue;
     }
 }
 
